@@ -348,7 +348,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     trainDF.cache()
     println(trainDF.show(5))
     ```
-    2. Replace <*url*>, <*port*>, <*location*>, <*userid*>, and <*password*> with your information from Step 2 - Part 2 and Part 3
+    2. Replace <*url*>, <*port*>, <*location*>, <*userid*>, and <*password*> with your information from Step 2 - Part 3 and Part 4
   
       For example,
 
@@ -482,9 +482,12 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
 ## Reference
 ### Links
-[IBM Z Community Cloud self-service portal](https://zcloud.marist.edu/#/login). 
+[IBM Z Community Cloud self-service portal](https://zcloud.marist.edu/#/login)
+
 [IBM Machine Learning for z/OS](https://www.ibm.com/us-en/marketplace/machine-learning-for-zos)
+
 [IBM Knowledge Center](http://leto.svl.ibm.com/kc/SS9PF4_1.1.0/v1r1m0/src/tpc/mlz_createmodelbuilder.dita)
+
 [Jupyter Notebook](http://jupyter-notebook.readthedocs.io/en/latest/)
 
 
