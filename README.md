@@ -348,7 +348,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     trainDF.cache()
     println(trainDF.show(5))
     ```
-    2. Replace url, <port>, <location>, <userid>, and <password> with your information from Step 2 - Part 2 and Part 3
+    2. Replace <*url*>, <*port*>, <*location*>, <*userid*>, and <*password*> with your information from Step 2 - Part 2 and Part 3
   
       For example,
 
