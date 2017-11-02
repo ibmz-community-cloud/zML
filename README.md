@@ -13,10 +13,8 @@ To be added
 ## Steps
 1. Sign up for an IBM Z Community Cloud account.
 2. Log in to the Self Service Portal.
-3. Configure your Analytics Instance and upload data.
-4. Use case #1: Run a Scala program in batch mode.
-5. Use case #2: Run a Python program with Jupyter Notebook.
-6. Use case #3: Run a PySpark program with Jupyter Notebook.
+3. Use case #1: Visual Model Builder.
+4. Use case #2: Work with Jupyter Notebook.
 
 ## Step 1. Sign up for an IBM Z Community Cloud account
 
@@ -32,7 +30,7 @@ Note: The Google Chrome browser is recommended.
 
 1. Open a web browser and access the [IBM Z Community Cloud self-service portal](https://zcloud.marist.edu/#/login). 
    
-   ![alt text](images/portal-login.png "Portal login")
+   ![alt text](images/picture1.png "Image")
 
     1. Enter your Portal User ID and Portal Password
     2. Click **'Sign In'**
@@ -41,17 +39,17 @@ Note: The Google Chrome browser is recommended.
 
     1. Click **'Try Machine Learning'**
     
-   ![alt text](images/try-service.png "Try Analytics Service")
+   ![alt text](images/picture2.png "Image")
  
 3. You will now see a dashboard, which shows the status of your Machine Learning for z/OS instance. 
 
    At the top of the screen, notice the ‘z/OS Status’ indicator, which should show the status of your instance as ‘OK’.
    
-   ![alt text](images/try-service.png "Try Analytics Service")
+   ![alt text](images/picture3.png "Image")
    
    In the middle of the screen, your ‘Host’, ‘Machine Learning User Name’, ‘Data Management’, ‘Data connection information’, and ‘Machine Learning Portal’ sections will be displayed. You will use this information in the following examples.  Note: ‘Machine Learning User Name’ is not the same as your ‘Portal User ID’.
    
-   ![alt text](images/try-service.png "Try Analytics Service")
+   ![alt text](images/picture4.png "Image")
 
 3. For logging in the first time, you must set a new instance password.
     
@@ -60,7 +58,7 @@ Note: The Google Chrome browser is recommended.
     3. Repeat the new password for your instance
     4. Click ‘Change Password’
  
-   ![alt text](images/try-service.png "Try Analytics Service")
+   ![alt text](images/picture5.png "Image")
    
 ## Step 3: Visual Model Builder
 
@@ -70,11 +68,11 @@ In this example, a retail company wants to boost sales of outdoor activities rel
    
     1. Click ‘Go’ to access the Machine Learning for z/OS portal
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture6.png "Image")
     
     2. Click ‘Sign In’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture7.png "Image")
     
     3. Enter your ‘Machine Learning User Name’ as provided in your dashboard
     
@@ -82,17 +80,17 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     5. Click ‘Submit’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture8.png "Image")
 
 2. Create a new project.
 
     1. Click ‘Create Project’
 
-    ![alt text](images/try-service.png "Try Analytics Service") 
+    ![alt text](images/picture9.png "Image") 
 
     2. Enter Tent-Example-Project as the name for the project
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture10.png "Image")
     
     3. Click ‘Create’
 
@@ -102,19 +100,19 @@ In this example, a retail company wants to boost sales of outdoor activities rel
 
     1. Click the ‘Connections’ tab
 
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture11.png "Image")
     
     2. Click ‘Add Connections’
 
     3. Click ‘Create Connection’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture12.png "Image")
 
     4. Enter TENTDATA as the name for the connection
     
     5. Select ‘DB2 for z/OS’ as the ‘External service’ and enter the connection details (Host = IP Addr, Port = 5035, Location = DALLASB, Table = MLZ.TENTDATA, User = Machine Learning User Name, and Password) as provided in your dashboard
 
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture13.png "Image")
     
     6. Click ‘Create’
     
@@ -122,33 +120,33 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
 4. Enter TentModel-Builder as the name for the model.
 
-   ![alt text](images/try-service.png "Try Analytics Service")
+   ![alt text](images/picture14.png "Image")
 
     1. Click ‘Create’
     
     2. On the ‘Select data asset’ page, select the connection to the TENTDATA table that you created.
 
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture15.png "Image")
     
     3. Click ‘Next’
 
     The following message will appear while the data is loaded.
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture16.png "Image")
     
     4. Click ‘Add a Transformer’ on the ‘Prepare data set’ page
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture17.png "Image")
 
     5. Select ‘StringIndexer’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture18.png "Image")
     
     6. Click ‘Configure’
 
     Keep the default name Transformer1, specify GENDER as input, and specify GENDER_I as output. 
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture19.png "Image")
     
     7. Click ‘Save’
     
@@ -164,15 +162,15 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     2. Select LABEL from the pull down menu on the ‘Train model’ page
     
-    ![alt text](images/try-service.png "Try Analytics Service")
-
+    ![alt text](images/picture20.png "Image")
+    
     3. Click ‘Add an Estimator’ and select the ‘Logistic_regression’ algorithm
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture21.png "Image")
     
     4. Click ‘Configure’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture22.png "Image")
     
     5. Enter TentModelVB for the model name
     
@@ -184,29 +182,29 @@ In this example, a retail company wants to boost sales of outdoor activities rel
 
     1. Click ‘Next’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
-
+    ![alt text](images/picture23.png "Image")
+    
 7. After the training completes, review the result.
 
-   ![alt text](images/try-service.png "Try Analytics Service")
-
+   ![alt text](images/picture24.png "Image")
+   
 8. Start evaluating the model. 
 
     1. Click ‘Next’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
-
+    ![alt text](images/picture25.png "Image")
+    
 9. After the evaluation completes, review the result.
 
-   ![alt text](images/try-service.png "Try Analytics Service")
+   ![alt text](images/picture26.png "Image")
 
     1. Click ‘Save’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture27.png "Image")
     
     2. Click ‘Save’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture28.png "Image")
     
     3. Click ‘Close’
     
@@ -214,58 +212,59 @@ In this example, a retail company wants to boost sales of outdoor activities rel
 
     1. Locate the TentModelVB model from the ‘Model management’ page located on the sidebar menu
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture29.png "Image")
     
     2. Click on the ’. . .’ under ‘ACTIONS’ for the TentModelVB model
+    
     3. Click ‘Create deployment’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture30.png "Image")
     
     4. Enter a name for the deployment, such as tentModelVBDeploy
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture31.png "Image")
     
     5. Click ‘Create’ 
     
     6. Locate tentModelVBDeploy from the ‘Deployments’ tab
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture32.png "Image")
     
     7. Click on tentModelVBDeploy
 
     In the ‘Deployment Details’ section, the ‘Scoring endpoint’ is a RESTful API provided by the scoring service of Machine Learning for z/OS, which can be called for online scoring within an application.
     
-    ![alt text](images/try-service.png "Try Analytics Service")
-
+    ![alt text](images/picture33.png "Image")
+    
 11. Use the model to test a prediction.
 
     1. Locate tentModelVBDeploy from the ‘Deployments’ tab
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture34.png "Image")
     
     2. Click on the ’. . .’ under ‘ACTIONS’ for tentModelVBDeploy
     
     3. Click ‘Test’
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture35.png "Image")
     
     4. On the ‘Test model’ page, enter the following values for a record in the ‘Input Record’ field:
     
     **{"Record": ["M",27,"Single","Trades",4000,"USA","XXX"]}**
 
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture36.png "Image")
     
     5. Click ‘Predict’
     
     The output should indicate “prediction”: 1, which indicates this customer will purchase a tent based on the inputs to the logistic regression model.  
     
-    ![alt text](images/try-service.png "Try Analytics Service")
+    ![alt text](images/picture37.png "Image")
     
     6. On the ‘Test model’ page, enter the following values for a record in the ‘Input Record’ field:
     
     **{"Record": ["F",66,"Married","Other",4001,"CHINA","XXX"]}**
 
-    7.Click ‘Predict’
+    7. Click ‘Predict’
     
     The output should indicate “prediction”: 0, which indicates this customer will not purchase a tent based on the inputs to the logistic regression model.  
 
@@ -280,10 +279,14 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 2. In the Notebooks section of the ‘Analytics assets’ tab, 
 
     1. Click ‘Add Notebooks’
+    
+    ![alt text](images/picture38.png "Image")
 
 3. Enter a name for the notebook, such as Tent-Notebook
 
     1. Click ‘Create notebook’
+    
+    ![alt text](images/picture39.png "Image")
 
     The notebook is saved and opens in the Notebooks editor.
     
@@ -291,13 +294,21 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
     1. Type sc.master in the first Notebook cell
     
+    ![alt text](images/picture40.png "Image")
+    
     2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
+    
+    ![alt text](images/picture41.png "Image")
 
     This will return the Host IP Address of your Spark installation. For example,
+    
+    ![alt text](images/picture42.png "Image")
 
 5. Insert a second cell.
     
     1. Click ‘Insert’ then ‘Insert Cell Below’
+    
+    ![alt text](images/picture43.png "Image")
 
 6. In the second cell,
 
@@ -353,8 +364,10 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     3. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
     This will read data from the MLZ.TENTDATA table that you previously created and loaded in your DB2 for z/OS subsystem, split the data into groups for training and testing, and list the first five rows from the training group as a preview. For example,
+    
+    ![alt text](images/picture44.png "Image")
  
-8.	Insert a fourth cell:
+8.	Insert a fourth cell.
 
     1. Enter the following sample Scala code.
     ```    
@@ -374,13 +387,17 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     val model = pipeline.fit(trainDF)
     print(model)
     ```
-    2. Ensure all ‘val’ statements do not wrap
+    2. Ensure all ‘val’ statements do not wrap.
+    
+    ![alt text](images/picture45.png "Image")
     
     3. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
     This will transform the data, construct the feature vectors, train a model using logistic regression, train a model using decision tree, and run CADS to determine the best model.  For example,
+    
+    ![alt text](images/picture46.png "Image")
 
-9. Insert a fifth cell
+9. Insert a fifth cell.
 
     1. Enter the following sample Scala code.
 
@@ -395,8 +412,10 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
 
     This will evaluate the performance of the model.  For example, the "areaUnderROC" should be similar to 0.7549452221545951.
+    
+    ![alt text](images/picture47.png "Image")
 
-10. Insert a sixth cell
+10. Insert a sixth cell.
 
     1. Enter the following sample Scala code.
 
@@ -409,7 +428,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will construct the data to plot the ROC curve. 
     
-11.	Insert a seventh cell
+11. Insert a seventh cell.
 
     1. Enter the following sample Scala code.
     
@@ -421,7 +440,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will import the Brunel visualization capabilities by adding a jar file to your Notebook. 
     
-12. Insert an eighth cell
+12. Insert an eighth cell.
 
     1. Enter the following sample Scala code.
 
@@ -432,8 +451,10 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
     This will create a ROC curve that illustrates the relationship between the True Positive Rate (TPR) and the False Positive Rate (FPR).  For example,
+    
+    ![alt text](images/picture48.png "Image")
 
-13.	Insert a ninth cell
+13. Insert a ninth cell.
 
     1. Enter the following sample Scala code.
     
@@ -444,16 +465,24 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
     This will create a bubble diagram that illustrates the relationship between marital status and the decision to buy a tent in the sample TENTDATA table data. For example,
+    
+    ![alt text](images/picture49.png "Image")
 
-14.	Save the Notebook.
+14. Save the Notebook.
 
     1. Click ‘File’ -> ‘Save’
+    
+    ![alt text](images/picture50.png "Image")
 
 15. Stop the Kernel.
 
     1. From the sidebar menu, select Tent-Example-Project under ‘Recent items’
+    
     2. Click on the ’. . .’ under ‘ACTIONS’
+    
     3. Click ‘Stop Kernel’
+    
+    ![alt text](images/picture51.png "Image")
 
 ## Reference
 ### Links
