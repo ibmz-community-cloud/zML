@@ -3,10 +3,6 @@
 ## Overview
 The following instructions can be used to run an analytics application using Machine Learning for z/OS. This analytics example uses the Visual Model Builder to build, evaluate, and deploy a model in a retail scenario.  Fictitious customer data stored in a DB2 table are also analyzed with machine learning models using Jupyter Notebook.
 
-## Prerequisites
-Sign up for a Machine Learning for z/OS trial account
-If you have not done so already, register at https://zcloud.marist.edu/#/register for a 30-day trial account. You will receive an email containing credentials to access the self-service portal.  This is where you can start exploring all our available services.
-
 ## Architecture
 To be added
 
@@ -352,7 +348,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     trainDF.cache()
     println(trainDF.show(5))
     ```
-    2. Replace <url>, <port>, <location>, <userid>, and <password> with your information from Step?
+    2. Replace url, <port>, <location>, <userid>, and <password> with your information from Step 2 - Part 2 and Part 3
   
       For example,
 
