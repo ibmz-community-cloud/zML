@@ -90,31 +90,44 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     4. Click ‘Create’
 
-    The ‘Analytics assets’ tab will open for the new project.
-
-3. Create a connection to DB2 for z/OS.
-
-    1. Click the ‘Connections’ tab
-
-    ![alt text](images/Picture11.png "Image")
+    The ‘Overview’ tab will open for the new project.
     
-    2. Click ‘Add Connections’
+     ![alt text](images/Picture55.png "Image")
+
+3.  Click on the Settings tab
+
+     1.  Scrolll down to the 'Access Tokens' section
+
+     2.  Click 'create new token'
+     
+     ![alt text](images/Picture56.png "Image")
+    
+     3.  Enter a token name, select Editor for Access Role for Project, and click Add to create a new token.
+     ![alt text](images/Picture57.png "Image")
+
+4. Create a connection to DB2 for z/OS.
+
+    1. Locate 'Find and add data' from the top menu
+
+    ![alt text](images/Picture58.png "Image")
+    
+    2. Click ‘My Connections'
 
     3. Click ‘Create Connection’
     
-    ![alt text](images/Picture12.png "Image")
+    ![alt text](images/Picture59.png "Image")
 
     4. Enter TENTDATA as the name for the connection
     
-    5. Select ‘DB2 for z/OS’ as the ‘External service’ and enter the connection details (Host = IP Addr, Port = 5035, Location = DALLASB, Table = MLZ.TENTDATA, User = Machine Learning User Name, and Password) as provided in your dashboard
+    5. Select ‘DB2 for z/OS’ as the ‘Data Source’ and enter the connection details (Host = IP Addr, Port = 5035, Location = DALLASB, SQL Object Type = SQL Query, SQL Query Text = (select * from MLZ.TENTDATA) as TENTDATATABLE, User = Machine Learning User Name, and Password) as provided in your dashboard
 
-    ![alt text](images/Picture13.png "Image")
+    ![alt text](images/Picture60.png "Image")
     
     6. Click ‘Create’
     
     7. Click ‘Add Models’ in the ‘Visual model builder’ section
     
-4. Enter TentModel-Builder as the name for the model.
+5. Enter TentModel-Builder as the name for the model.
 
    ![alt text](images/Picture14.png "Image")
 
@@ -148,7 +161,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     Transformer 1 is added to the Configured Transformers list. 
     
-5. Repeat the above steps for adding a transformer to create the following additional transformers: 
+6. Repeat the above steps for adding a transformer to create the following additional transformers: 
 
     + Transformer2 uses StringIndexer for MARITAL_STATUS as input and MARITAL_STATUS_I as output.
     + Transformer3 uses StringIndexer for PROFESSION as input and PROFESSION_I as output.
@@ -174,23 +187,23 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     7. Click ‘Save’
     
-6. Start training the model.
+7. Start training the model.
 
     1. Click ‘Next’
     
     ![alt text](images/Picture23.png "Image")
     
-7. After the training completes, review the result.
+8. After the training completes, review the result.
 
    ![alt text](images/Picture24.png "Image")
    
-8. Start evaluating the model. 
+9. Start evaluating the model. 
 
     1. Click ‘Next’
     
     ![alt text](images/Picture25.png "Image")
     
-9. After the evaluation completes, review the result.
+10. After the evaluation completes, review the result.
 
    ![alt text](images/Picture26.png "Image")
 
@@ -204,7 +217,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     3. Click ‘Close’
     
-10. Now, we can deploy the model.
+11. Now, we can deploy the model.
 
     1. Locate the TentModelVB model from the ‘Model management’ page located on the sidebar menu
     
@@ -232,7 +245,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     ![alt text](images/Picture33.png "Image")
     
-11. Use the model to test a prediction.
+12. Use the model to test a prediction.
 
     1. Locate tentModelVBDeploy from the ‘Deployments’ tab
     
