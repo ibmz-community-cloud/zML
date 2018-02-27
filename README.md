@@ -198,7 +198,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     
     
-    4. Click ‘Add a Transformer’ on the ‘Prepare data set’ page
+    PICK UP FROM HERE 4. Click ‘Add a Transformer’ on the ‘Prepare data set’ page
     
     ![alt text](images/Picture17.png "Image")
 
