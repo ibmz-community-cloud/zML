@@ -66,17 +66,13 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     ![alt text](images/Picture6.png "Image")
     
-    2. Click ‘Sign In’
+    2. Enter your ‘Machine Learning User Name’ as provided in your dashboard
     
-    ![alt text](images/Picture7.png "Image")
+    3. Enter the Password you created in Step 2
     
-    3. Enter your ‘Machine Learning User Name’ as provided in your dashboard
+    4. Click ‘Sign In’
     
-    4. Enter the Password you created in Step 2.
-    
-    5. Click ‘Submit’
-    
-    ![alt text](images/Picture8.png "Image")
+    ![alt text](images/Picture52.png "Image")
 
 2. Create a new project.
 
