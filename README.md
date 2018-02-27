@@ -308,7 +308,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
 6. In the second cell,
 
-    1.enter the following sample Scala code.
+    1. Enter the following sample Scala code.
 
     ```
     import org.apache.spark.ml.feature.{StringIndexer, IndexToString, VectorIndexer, VectorAssembler} 
