@@ -162,29 +162,39 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     9. On the Train model page, select TENT_LABEL for Column
     
-    ![alt text](images/Picture65.png "Image")
-    
     10. Select Binary Classification
     
-    ![alt text](images/Picture66.png "Image")
+    ![alt text](images/Picture65.png "Image")
     
     11. Click 'Add Estimators' 
     
     12. Select 'Logistic_regression' algorithm
     
-    ![alt text](images/Picture67.png "Image")
+    ![alt text](images/Picture66.png "Image")
     
     13. Click 'Add'
 
-6. Train the model, 
+6. Train the model
+
+    ![alt text](images/Picture67.png "Image")
 
     1. Click 'Next'
     
 7. After the training completes, review the result
 
+    ![alt text](images/Picture68.png "Image")
+
     1. Click 'Save'
     
+    ![alt text](images/Picture69.png "Image")
+    
+    2. Click 'Save'
+    
 8. Go to the Models tab of the Model Management page and verify that the tentModelVB model is on the list
+    
+    ![alt text](images/Picture70.png "Image")
+    
+    
     
     
     
