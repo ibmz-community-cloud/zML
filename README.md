@@ -76,15 +76,19 @@ In this example, a retail company wants to boost sales of outdoor activities rel
 
 2. Create a new project.
 
-    1. Click ‘Create Project’
+    1. Locate 'My Projects' from the sidebar menu
+    
+    ![alt text](images/Picture53.png "Image") 
+    
+    2.  Click ‘Create Project’
 
     ![alt text](images/Picture54.png "Image") 
 
-    2. Enter Tent-Example-Project as the name for the project
+    3. Enter Tent-Example-Project as the name for the project
     
     ![alt text](images/Picture10.png "Image")
     
-    3. Click ‘Create’
+    4. Click ‘Create’
 
     The ‘Analytics assets’ tab will open for the new project.
 
