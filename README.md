@@ -78,7 +78,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
 
     1. Click ‘Create Project’
 
-    ![alt text](images/Picture9.png "Image") 
+    ![alt text](images/Picture54.png "Image") 
 
     2. Enter Tent-Example-Project as the name for the project
     
