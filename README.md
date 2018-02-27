@@ -60,7 +60,7 @@ Note: The Google Chrome browser is recommended.
 
 In this example, a retail company wants to boost sales of outdoor activities related products.  You will use Visual Model Builder to create a classification model using historical data that resides in DB2 for z/OS.  This model is then used to predict the probability of a customer buying a tent based on the customer’s profile. 
 
-1. Start building a logistic regression model.
+1. Start building a logistic regression model
    
     1. Click ‘Go’ to access the Machine Learning for z/OS portal
     
@@ -74,7 +74,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     ![alt text](images/Picture52.png "Image")
 
-2. Create a new project.
+2. Create a new project
 
     1. Locate 'My Projects' from the sidebar menu
     
@@ -94,18 +94,23 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
      ![alt text](images/Picture55.png "Image")
 
-3.  Click on the Settings tab
+3.  Create a new token
 
-     1.  Scrolll down to the 'Access Tokens' section
+     1. Click on the Settings tab
 
-     2.  Click 'create new token'
+     2.  Scrolll down to the 'Access Tokens' section
+
+     3.  Click 'create new token'
      
      ![alt text](images/Picture56.png "Image")
     
-     3.  Enter a token name, select Editor for Access Role for Project, and click Add to create a new token.
+     4.  Enter a token name and select 'Editor' for 'Access Role for Project'
+     
      ![alt text](images/Picture57.png "Image")
+     
+     5.  Click 'Add'
 
-4. Create a connection to DB2 for z/OS.
+4. Create a connection to DB2 for z/OS
 
     1. Locate 'Find and add data' from the top menu
 
@@ -119,23 +124,35 @@ In this example, a retail company wants to boost sales of outdoor activities rel
 
     4. Enter TENTDATA as the name for the connection
     
-    5. Select ‘DB2 for z/OS’ as the ‘Data Source’ and enter the connection details (Host = IP Addr, Port = 5035, Location = DALLASB, SQL Object Type = SQL Query, SQL Query Text = (select * from MLZ.TENTDATA) as TENTDATATABLE, User = Machine Learning User Name, and Password) as provided in your dashboard
+    5. Select ‘IBM DB2 for z/OS’ as the ‘Data Source’ and enter the connection details (Host = IP Addr, Port = 5035, Location = DALLASB, SQL Object Type = SQL Query, SQL Query Text = (select * from MLZ.TENTDATA) as TENTDATATABLE, User = Machine Learning User Name, and Password) as provided in your dashboard
 
     ![alt text](images/Picture60.png "Image")
     
     6. Click ‘Create’
     
-    7. Click ‘Add Models’ in the ‘Visual model builder’ section
+5. Create a visual model
+
+    1. Click on the ‘Analytics Assets’ tab
     
-5. Enter TentModel-Builder as the name for the model.
-
-   ![alt text](images/Picture14.png "Image")
-
-    1. Click ‘Create’
+    2. In the Visual Model Builder section, click 'add visual model builder'
     
-    2. On the ‘Select data asset’ page, select the connection to the TENTDATA table that you created.
+    ![alt text](images/Picture61.png "Image")
+    
+    3. Enter a name for the model, such as TentModelVB. 
 
-    ![alt text](images/Picture15.png "Image")
+    4. Select IBM® Open Data Analytics for z/OS for Runtime Engine. 
+     
+    ![alt text](images/Picture62.png "Image")
+     
+    5. Click 'Create'
+    
+    6. Close the kernel provision message
+    
+    ![alt text](images/Picture63.png "Image")
+
+    7. On the ‘Select data asset’ page, select the connection to the TENTDATA table that you created
+
+    ![alt text](images/Picture64.png "Image")
     
     3. Click ‘Next’
 
