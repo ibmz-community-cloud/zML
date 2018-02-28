@@ -98,7 +98,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
 
      1. Click on the Settings tab
 
-     2.  Scrolll down to the 'Access Tokens' section
+     2.  Scroll down to the 'Access Tokens' section
 
      3.  Click 'create new token'
      
