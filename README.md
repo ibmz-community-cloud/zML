@@ -256,11 +256,11 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
 2. In the Notebooks section of the ‘Analytics Assets’ tab, 
 
-    1. Click ‘add notebooks’
+    1. Click ‘add notebook’
     
     ![alt text](images/Picture79.png "Image")
 
-3. Enter 'Tent-Notebook' for the name of notebook, select 'Built-in Spark Cluster' for the Runtime Engine, and 'Scala' for  the Language.
+3. Enter 'Tent-Notebook' for the name of the notebook, select 'Built-in Spark Cluster' for the Runtime Engine, and select 'Scala' for  the Language.
 
     1. Click ‘Create Notebook’
     
