@@ -160,7 +160,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     ![alt text](images/Picture16.png "Image")
     
-    9. On the Train model page, select 'TENT_LABEL (Double)' for Column
+    9. On the Train model page, select 'TENT_LABEL (Double)' for Column value
     
     10. Select Binary Classification
     
@@ -198,61 +198,53 @@ In this example, a retail company wants to boost sales of outdoor activities rel
 
     1. Locate the TentModelVB model from the ‘Model management’ page located on the sidebar menu
     
-    ![alt text](images/Picture29.png "Image")
+    ![alt text](images/Picture71.png "Image")
     
     2. Click on the ’. . .’ under ‘ACTIONS’ for the TentModelVB model
     
-    3. Click ‘Create deployment’
+    3. Click ‘Deploy’
     
-    ![alt text](images/Picture30.png "Image")
+    ![alt text](images/Picture72.png "Image")
     
-    4. Enter a name for the deployment, such as tentModelVBDeploy
+    4. Enter a name for the deployment, such as 'tentModelVBDeploy'
     
-    ![alt text](images/Picture31.png "Image")
+    ![alt text](images/Picture73.png "Image")
     
     5. Click ‘Create’ 
     
     6. Locate tentModelVBDeploy from the ‘Deployments’ tab
     
-    ![alt text](images/Picture32.png "Image")
+    ![alt text](images/Picture74.png "Image")
     
     7. Click on tentModelVBDeploy
 
     In the ‘Deployment Details’ section, the ‘Scoring endpoint’ is a RESTful API provided by the scoring service of Machine Learning for z/OS, which can be called for online scoring within an application.
     
-    ![alt text](images/Picture33.png "Image")
+    ![alt text](images/Picture75.png "Image")
     
 12. Use the model to test a prediction.
 
     1. Locate tentModelVBDeploy from the ‘Deployments’ tab
     
-    ![alt text](images/Picture34.png "Image")
+    ![alt text](images/Picture74.png "Image")
     
     2. Click on the ’. . .’ under ‘ACTIONS’ for tentModelVBDeploy
     
     3. Click ‘Test’
     
-    ![alt text](images/Picture35.png "Image")
+    ![alt text](images/Picture76.png "Image")
     
     4. On the ‘Test model’ page, enter the following values for a record in the ‘Input Record’ field:
     
-    **{"Record": ["M",27,"Single","Trades",4000,"USA","XXX"]}**
+    **[{"GENDER": "M", "AGE": 27, "MARITAL_STATUS": "Single", "PROFESSION": "Trades", "CUSTOMER_ID": 4000, "COUNTRY":"USA", "NATIONAL_ID": "XXX"}]**
 
-    ![alt text](images/Picture36.png "Image")
+    ![alt text](images/Picture77.png "Image")
     
     5. Click ‘Predict’
     
     The output should indicate “prediction”: 1, which indicates this customer will purchase a tent based on the inputs to the logistic regression model.  
     
-    ![alt text](images/Picture37.png "Image")
-    
-    6. On the ‘Test model’ page, enter the following values for a record in the ‘Input Record’ field:
-    
-    **{"Record": ["F",66,"Married","Other",4001,"CHINA","XXX"]}**
-
-    7. Click ‘Predict’
-    
-    The output should indicate “prediction”: 0, which indicates this customer will not purchase a tent based on the inputs to the logistic regression model.  
+    ![alt text](images/Picture78.png "Image")
 
 ## Step 4: Working with Jupyter Notebook
 
