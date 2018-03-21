@@ -138,7 +138,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     ![alt text](images/Picture61.png "Image")
     
-    3. Enter a name for the model, such as TentModelVB. 
+    3. Enter 'TentModelVB' for the model name 
 
     4. Select IBM® Open Data Analytics for z/OS for Runtime Engine. 
      
@@ -160,7 +160,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     ![alt text](images/Picture16.png "Image")
     
-    9. On the Train model page, select TENT_LABEL for Column
+    9. On the Train model page, select 'TENT_LABEL (Double)' for Column
     
     10. Select Binary Classification
     
@@ -168,7 +168,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     11. Click 'Add Estimators' 
     
-    12. Select 'Logistic_regression' algorithm
+    12. Select the 'Logistic Regression' algorithm
     
     ![alt text](images/Picture66.png "Image")
     
@@ -194,85 +194,7 @@ In this example, a retail company wants to boost sales of outdoor activities rel
     
     ![alt text](images/Picture70.png "Image")
     
-    
-    
-    
-    
-    PICK UP FROM HERE 4. Click ‘Add a Transformer’ on the ‘Prepare data set’ page
-    
-    ![alt text](images/Picture17.png "Image")
-
-    5. Select ‘StringIndexer’
-    
-    ![alt text](images/Picture18.png "Image")
-    
-    6. Click ‘Configure’
-
-    Keep the default name Transformer1, specify GENDER as input, and specify GENDER_I as output. 
-    
-    ![alt text](images/Picture19.png "Image")
-    
-    7. Click ‘Save’
-    
-    Transformer 1 is added to the Configured Transformers list. 
-    
-6. Repeat the above steps for adding a transformer to create the following additional transformers: 
-
-    + Transformer2 uses StringIndexer for MARITAL_STATUS as input and MARITAL_STATUS_I as output.
-    + Transformer3 uses StringIndexer for PROFESSION as input and PROFESSION_I as output.
-    + Transformer4 uses VectorAssembler to assemble the input columns [PROFESSION_I, MARITAL_STATUS_I, GENDER_I, AGE] and features as output.
-    
-    1. Click ‘Next’ on the ‘Prepare data set’ page
-    
-    2. Select LABEL from the pull down menu on the ‘Train model’ page
-    
-    ![alt text](images/Picture20.png "Image")
-    
-    3. Click ‘Add an Estimator’ and select the ‘Logistic_regression’ algorithm
-    
-    ![alt text](images/Picture21.png "Image")
-    
-    4. Click ‘Configure’
-    
-    ![alt text](images/Picture22.png "Image")
-    
-    5. Enter TentModelVB for the model name
-    
-    6. Select features for the Features col 
-    
-    7. Click ‘Save’
-    
-7. Start training the model.
-
-    1. Click ‘Next’
-    
-    ![alt text](images/Picture23.png "Image")
-    
-8. After the training completes, review the result.
-
-   ![alt text](images/Picture24.png "Image")
-   
-9. Start evaluating the model. 
-
-    1. Click ‘Next’
-    
-    ![alt text](images/Picture25.png "Image")
-    
-10. After the evaluation completes, review the result.
-
-   ![alt text](images/Picture26.png "Image")
-
-    1. Click ‘Save’
-    
-    ![alt text](images/Picture27.png "Image")
-    
-    2. Click ‘Save’
-    
-    ![alt text](images/Picture28.png "Image")
-    
-    3. Click ‘Close’
-    
-11. Now, we can deploy the model.
+9. Now, we can deploy the model.
 
     1. Locate the TentModelVB model from the ‘Model management’ page located on the sidebar menu
     
