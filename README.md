@@ -252,19 +252,19 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
 1. From the sidebar menu, 
 
-    1. select Tent-Example-Project under ‘Recent items’
+    1. select Tent-Example-Project under ‘Recent Items’
 
-2. In the Notebooks section of the ‘Analytics assets’ tab, 
+2. In the Notebooks section of the ‘Analytics Assets’ tab, 
 
-    1. Click ‘Add Notebooks’
+    1. Click ‘add notebooks’
     
-    ![alt text](images/Picture38.png "Image")
+    ![alt text](images/Picture79.png "Image")
 
-3. Enter a name for the notebook, such as Tent-Notebook
+3. Enter 'Tent-Notebook' for the name of notebook, select 'Built-in Spark Cluster' for the Runtime Engine, and 'Scala' for  the Language.
 
-    1. Click ‘Create notebook’
+    1. Click ‘Create Notebook’
     
-    ![alt text](images/Picture39.png "Image")
+    ![alt text](images/Picture80.png "Image")
 
     The notebook is saved and opens in the Notebooks editor.
     
@@ -272,11 +272,9 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
     1. Type sc.master in the first Notebook cell
     
-    ![alt text](images/Picture40.png "Image")
-    
     2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
-    ![alt text](images/Picture41.png "Image")
+    ![alt text](images/Picture81.png "Image")
 
     This will return the Host IP Address of your Spark installation. For example,
     
