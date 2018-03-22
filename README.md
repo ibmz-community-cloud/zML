@@ -347,49 +347,55 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
     1. Enter the following sample Scala code.
     ```    
-    val genderIndexer = new StringIndexer().setInputCol("GENDER").setOutputCol("GENDER_INDEX")
-    val maritalStatusIndexer = new StringIndexer().setInputCol(
-        "MARITAL_STATUS").setOutputCol("MARITAL_STATUS_INDEX")
+    val genderIndexer = new StringIndexer().setInputCol("GENDER").
+    setOutputCol("GENDER_INDEX")
+    val maritalStatusIndexer = new StringIndexer().setInputCol
+    ("MARITAL_STATUS").setOutputCol("MARITAL_STATUS_INDEX")
     val professionIndexer: StringIndexer = new StringIndexer().
-        setInputCol("PROFESSION").setOutputCol("PROFESSION_INDEX")
-    val assembler = new VectorAssembler().setInputCols(Array(
-        "GENDER_INDEX", "MARITAL_STATUS_INDEX", "PROFESSION_INDEX", "AGE")).setOutputCol("features")
-    val lr = new LogisticRegression().setRegParam(0.01).setLabelCol("label").setFeaturesCol("features")
-    val decisionTree = new DecisionTreeClassifier().setMaxBins(50).setLabelCol("label").setFeaturesCol("features")
+    setInputCol("PROFESSION").setOutputCol("PROFESSION_INDEX")
+    val assembler = new VectorAssembler().setInputCols(Array
+    ("GENDER_INDEX", "MARITAL_STATUS_INDEX", "PROFESSION_INDEX",
+    "AGE")).setOutputCol("features")
+    val lr = new LogisticRegression().setMaxIter(500).
+    setLabelCol("TENT_LABEL")
 
-    val learners = List(Learner("LR", lr), Learner("DT", decisionTree))
-    val cads = CADSEstimator().setEvaluator(new     BinaryClassificationEvaluator().setMetricName("areaUnderROC")).setLearners(learners).setKeepBestNLearnersParam(3).setTarget(Target("rawPrediction", "label")).setNumSampleFoldsParam(2)
-    val pipeline = new IBMSparkPipeline().setStages(Array(genderIndexer, maritalStatusIndexer, professionIndexer, assembler, cads))
-    val model = pipeline.fit(trainDF)
-    print(model)
+    val pipeline = wmlspark.MLPipeline(Seq(genderIndexer,
+    maritalStatusIndexer,professionIndexer,assembler,lr)).bind
+    (genderIndexer,maritalStatusIndexer).bind
+    (maritalStatusIndexer,professionIndexer).bind
+    (professionIndexer,assembler).bind(assembler,lr)
+
+    val ds = SparkDataSources(genderIndexer.uid -> trainDF)
+    val tentModel = pipeline.fit(ds)
+
+    print(tentModel)
     ```
     2. Ensure all ‘val’ statements do not wrap.
     
-    ![alt text](images/Picture45.png "Image")
+    ![alt text](images/Picture84.png "Image")
     
     3. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
-    This will transform the data, construct the feature vectors, train a model using logistic regression, train a model using decision tree, and run CADS to determine the best model.  For example,
+    This will transform the data, construct the feature vector, and train a model using logistic regression.  For example,
     
-    ![alt text](images/Picture46.png "Image")
+    ![alt text](images/Picture85.png "Image")
 
 9. Insert a fifth cell.
 
     1. Enter the following sample Scala code.
 
     ```
-    import com.ibm.analytics.ngp.pipeline.evaluate._
-    import com.ibm.analytics.ngp.pipeline.evaluate.JsonMetricsModel._
-    import spray.json._
-    val metrics = Evaluator.evaluateModel(MLProblemType.BinaryClassifier,model,testDF) 
-    println(s"Binary Metric: ${metrics.asInstanceOf[BinaryClassificationMetricsModel].toJson}")
+    val metrics = Evaluator.evaluateModel(BinaryClassifier, 
+    tentModel.toLiniarSparkPipelineTransformer(ds), 
+    testDF, "prediction", "TENT_LABEL")
+    println("BinaryClassifier Evaluator: " + metrics.toJson)
     ```
 
     2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
 
-    This will evaluate the performance of the model.  For example, the "areaUnderROC" should be similar to 0.7549452221545951.
+    This will evaluate the performance of the model.  For example, the "areaUnderROC" should be similar to 0.7701750525646667.
     
-    ![alt text](images/Picture47.png "Image")
+    ![alt text](images/Picture86.png "Image")
 
 10. Insert a sixth cell.
 
