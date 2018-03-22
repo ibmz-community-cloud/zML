@@ -272,7 +272,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture87.png "Image")
 
-    1. Select the cell and Click ‘Cell’ -> ‘Run Cells’
+    1. A new Notebook cell will be inserted automatically.  Select the first cell and Click ‘Cell’ -> ‘Run Cells’
     
     ![alt text](images/Picture88.png "Image")
 
@@ -309,7 +309,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will import the Spark and Machine Learning packages.
     
-7. Insert a fourth cell 
+7. Insert a fourth cell.
 
     1. Enter the following sample Scala code.
     ```
