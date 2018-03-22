@@ -278,21 +278,19 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
 5. Verify that the master address of your Spark installation is returned correctly. 
 
-    1. Type sc.master in the second Notebook cell
+    1. Click ‘Insert’ then ‘Insert Cell Below’
     
-    2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
+    ![alt text](images/Picture43.png "Image")
+
+    2. Type sc.master in the second Notebook cell
+    
+    3. Select the cell and Click ‘Cell’ -> ‘Run Cells’
 
     This will return information about your Spark installation. For example,
     
     ![alt text](images/Picture89.png "Image")
 
 6. Insert a third cell.
-    
-    1. Click ‘Insert’ then ‘Insert Cell Below’
-    
-    ![alt text](images/Picture43.png "Image")
-
-7. In the third cell,
 
     1. Enter the following sample Scala code.
 
@@ -311,7 +309,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will import the Spark and Machine Learning packages.
     
-8. Insert a fourth cell 
+7. Insert a fourth cell 
 
     1. Enter the following sample Scala code.
     ```
@@ -349,7 +347,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture83.png "Image")
  
-9.	Insert a fifth cell.
+8.	Insert a fifth cell.
 
     1. Enter the following sample Scala code.
     ```    
@@ -386,7 +384,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture85.png "Image")
 
-10. Insert a sixth cell.
+9. Insert a sixth cell.
 
     1. Enter the following sample Scala code.
 
@@ -403,7 +401,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture86.png "Image")
 
-11. Insert a seventh cell.
+10. Insert a seventh cell.
 
     1. Enter the following sample Scala code.
 
@@ -416,7 +414,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will construct the data to plot the ROC curve. 
     
-12. Insert an eighth cell.
+11. Insert an eighth cell.
 
     1. Enter the following sample Scala code.
     
@@ -428,7 +426,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will import the Brunel visualization capabilities by adding a jar file to your Notebook. 
     
-13. Insert a ninth cell.
+12. Insert a ninth cell.
 
     1. Enter the following sample Scala code.
 
@@ -442,7 +440,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture48.png "Image")
 
-14. Insert a tenth cell.
+13. Insert a tenth cell.
 
     1. Enter the following sample Scala code.
     
@@ -456,13 +454,13 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture49.png "Image")
 
-15. Save the Notebook.
+14. Save the Notebook.
 
     1. Click ‘File’ -> ‘Save’
     
     ![alt text](images/Picture50.png "Image")
 
-16. Stop the Kernel.
+15. Stop the Kernel.
 
     1. From the sidebar menu, select Tent-Example-Project under ‘Recent items’
     
