@@ -429,7 +429,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will save your model to the respository service.
     
-11.  Save your Notebook
+11. Save your Notebook
 
     1. Click ‘File’ -> ‘Save’
     
