@@ -269,30 +269,30 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     The notebook is saved and opens in the Notebooks editor.
     
 4. From the Actions menu at the top (three vertically stacked dots), select 'Insert project token'.
+    
+    ![alt text](images/Picture87.png "Image")
 
     1. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
-    ![alt text](images/Picture81.png "Image")
+    ![alt text](images/Picture88.png "Image")
 
-Verify that the master address of your Spark installation is returned correctly. 
+5. Verify that the master address of your Spark installation is returned correctly. 
 
-    1. Type sc.master in the first Notebook cell
+    1. Type sc.master in the second Notebook cell
     
     2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
-    
-    ![alt text](images/Picture81.png "Image")
 
     This will return information about your Spark installation. For example,
     
-    ![alt text](images/Picture82x.png "Image")
+    ![alt text](images/Picture89.png "Image")
 
-5. Insert a second cell.
+6. Insert a third cell.
     
     1. Click ‘Insert’ then ‘Insert Cell Below’
     
     ![alt text](images/Picture43.png "Image")
 
-6. In the second cell,
+7. In the third cell,
 
     1. Enter the following sample Scala code.
 
@@ -311,7 +311,7 @@ Verify that the master address of your Spark installation is returned correctly.
     
     This will import the Spark and Machine Learning packages.
     
-7. Insert a third cell 
+8. Insert a fourth cell 
 
     1. Enter the following sample Scala code.
     ```
@@ -349,7 +349,7 @@ Verify that the master address of your Spark installation is returned correctly.
     
     ![alt text](images/Picture83.png "Image")
  
-8.	Insert a fourth cell.
+9.	Insert a fifth cell.
 
     1. Enter the following sample Scala code.
     ```    
@@ -386,7 +386,7 @@ Verify that the master address of your Spark installation is returned correctly.
     
     ![alt text](images/Picture85.png "Image")
 
-9. Insert a fifth cell.
+10. Insert a sixth cell.
 
     1. Enter the following sample Scala code.
 
@@ -403,7 +403,7 @@ Verify that the master address of your Spark installation is returned correctly.
     
     ![alt text](images/Picture86.png "Image")
 
-10. Insert a sixth cell.
+11. Insert a seventh cell.
 
     1. Enter the following sample Scala code.
 
@@ -416,7 +416,7 @@ Verify that the master address of your Spark installation is returned correctly.
     
     This will construct the data to plot the ROC curve. 
     
-11. Insert a seventh cell.
+12. Insert an eighth cell.
 
     1. Enter the following sample Scala code.
     
@@ -428,7 +428,7 @@ Verify that the master address of your Spark installation is returned correctly.
     
     This will import the Brunel visualization capabilities by adding a jar file to your Notebook. 
     
-12. Insert an eighth cell.
+13. Insert a ninth cell.
 
     1. Enter the following sample Scala code.
 
@@ -442,7 +442,7 @@ Verify that the master address of your Spark installation is returned correctly.
     
     ![alt text](images/Picture48.png "Image")
 
-13. Insert a ninth cell.
+14. Insert a tenth cell.
 
     1. Enter the following sample Scala code.
     
@@ -456,13 +456,13 @@ Verify that the master address of your Spark installation is returned correctly.
     
     ![alt text](images/Picture49.png "Image")
 
-14. Save the Notebook.
+15. Save the Notebook.
 
     1. Click ‘File’ -> ‘Save’
     
     ![alt text](images/Picture50.png "Image")
 
-15. Stop the Kernel.
+16. Stop the Kernel.
 
     1. From the sidebar menu, select Tent-Example-Project under ‘Recent items’
     
