@@ -341,7 +341,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will read data from the MLZ.TENTDATA table that you previously created and loaded in your DB2 for z/OS subsystem, split the data into groups for training and testing, and list the first five rows from the training group as a preview. For example,
     
-    ![alt text](images/Picture.png "Image")
+    ![alt text](images/Picture83.png "Image")
  
 8.	Insert a fourth cell.
 
