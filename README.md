@@ -309,19 +309,21 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
     1. Enter the following sample Scala code.
     ```
-    val dfRaw = spark.read.format("jdbc").options(Map(
-        "driver" -> "com.ibm.db2.jcc.DB2Driver",
-        "url" -> "jdbc:db2://<url>:<port>/<location>", "user" -> "<userid>", 
-        "password" -> "<password>", "dbtable" -> "MLZ.TENTDATA")).load()
+    val df = spark.read.format("jdbc").options(Map(
+    "driver" -> "com.ibm.db2.jcc.DB2Driver",
+    "url" -> "jdbc:db2://<url>:<port>/<location>", "user" -> "<userid>", 
+    "password" -> "<password>", "dbtable" -> "MLZ.TENTDATA")).load()
 
-    val df = dfRaw.select("label", "GENDER", "AGE", "MARITAL_STATUS", "PROFESSION", "CUSTOMER_ID", "COUNTRY", "NATIONAL_ID")
     val train = 80
-    val test = 20
+    val test = 10
+    val validate = 10
 
-    val splits = Sampling.trainingSplit(df, train, test)
+    val splits = Sampling.trainingSplit(df, train, test, validate)
+    //(Array(train / 100.0, test / 100.0, validate / 100.0))
 
     val trainDF = splits._1
     val testDF = splits._2
+    val validateDF = splits._3
 
     trainDF.cache()
     println(trainDF.show(5))
@@ -332,14 +334,14 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
       ```
       "url" -> "jdbc:db2://123.456.78.901:5035/DALLASB", "user" -> "SPKXXXX", 
-      "password" -> "password", "dbtable" -> "MLZ.TENTDATA")).load()
+      "password" -> "password"
       ```
       
     3. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
     This will read data from the MLZ.TENTDATA table that you previously created and loaded in your DB2 for z/OS subsystem, split the data into groups for training and testing, and list the first five rows from the training group as a preview. For example,
     
-    ![alt text](images/Picture44.png "Image")
+    ![alt text](images/Picture.png "Image")
  
 8.	Insert a fourth cell.
 
