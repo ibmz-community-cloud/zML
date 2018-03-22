@@ -272,7 +272,9 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture87.png "Image")
 
-    1. A new Notebook cell will be inserted automatically.  Select the first cell and Click ‘Cell’ -> ‘Run Cells’
+    1. A new Notebook cell will be inserted automatically
+    
+    2. Select the first cell and Click ‘Cell’ -> ‘Run Cells’
     
     ![alt text](images/Picture88.png "Image")
 
