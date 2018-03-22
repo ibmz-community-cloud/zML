@@ -435,7 +435,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture90.png "Image")
 
-12. Verify that the tentModel model shows up under the Models tab on the Model Management page.
+12. Verify that the 'tentModel' model shows up under the 'Models' tab on the 'Model Management' page.
 
 
 
