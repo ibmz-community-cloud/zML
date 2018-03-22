@@ -260,7 +260,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture79.png "Image")
 
-3. Enter 'Tent-Notebook' for the name of the notebook, select 'Built-in Spark Cluster' for the Runtime Engine, and select 'Scala' for  the Language.
+3. Enter 'Tent-Notebook' for the name of the notebook, select 'IBM Open Data Analytics for z/OS' for the Runtime Engine, and select 'Scala' for  the Language.
 
     1. Click ‘Create Notebook’
     
