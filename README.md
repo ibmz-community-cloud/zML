@@ -268,7 +268,13 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
     The notebook is saved and opens in the Notebooks editor.
     
-4. Verify that the master address of your Spark installation is returned correctly. 
+4. From the Actions menu at the top (three vertically stacked dots), select 'Insert project token'.
+
+    1. Select the cell and Click ‘Cell’ -> ‘Run Cells’
+    
+    ![alt text](images/Picture81.png "Image")
+
+Verify that the master address of your Spark installation is returned correctly. 
 
     1. Type sc.master in the first Notebook cell
     
@@ -278,7 +284,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
     This will return information about your Spark installation. For example,
     
-    ![alt text](images/Picture82.png "Image")
+    ![alt text](images/Picture82x.png "Image")
 
 5. Insert a second cell.
     
