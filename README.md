@@ -276,9 +276,9 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture81.png "Image")
 
-    This will return the Host IP Address of your Spark installation. For example,
+    This will return information about your Spark installation. For example,
     
-    ![alt text](images/Picture42.png "Image")
+    ![alt text](images/Picture82.png "Image")
 
 5. Insert a second cell.
     
