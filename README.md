@@ -376,6 +376,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
     print(tentModel)
     ```
+    
     2. Ensure all ‘val’ statements do not wrap.
     
     ![alt text](images/Picture84.png "Image")
@@ -408,15 +409,38 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     1. Enter the following sample Scala code.
 
     ```
-    val rocCurve = metrics.asInstanceOf[BinaryClassificationMetricsModel].roc.map{ case ThresholdMetricModel(x, y) => (x,y)}
-    val rocDF = spark.createDataFrame(rocCurve).withColumnRenamed("_1", "FPR").withColumnRenamed("_2", "TPR")
+    val metaservicePath = "http://<metaservice-ip>:12501"
+    val client = MLRepositoryClient(metaservicePath)
+    client.authorize(serviceToken)
+    val mlRepositoryArtifact = MLRepositoryArtifact(tentModel,trainDF,
+    "tentModel",
+    MetaNames.DESCRIPTION -> "Tent Model", 
+    MetaNames.LABEL_FIELD -> "TENT_LABEL",
+    MetaNames.MODEL_META_PROJECT_ID -> projectID,
+    MetaNames.MODEL_META_ORIGIN_ID -> notebookID,
+    MetaNames.MODEL_META_ORIGIN_TYPE -> "notebook")
+    client.models.save(mlRepositoryArtifact)
+    println("model saved successfully")
     ```
+    
+    2. Replace <*metaservice-ip*> with the IP address of your Notebook
+    
+    3. Select the cell and Click ‘Cell’ -> ‘Run Cells’
+    
+    This will save your model to the respository service.
+    
+11.  Save your Notebook
+   
+    1. Click ‘File’ -> ‘Save’
+    
+    ![alt text](images/Picture90.png "Image")
 
-    2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
-    
-    This will construct the data to plot the ROC curve. 
-    
-11. Insert an eighth cell.
+12. Verify that the tentModel model shows up under the Models tab on the Model Management page.
+
+
+
+
+Insert an eighth cell.
 
     1. Enter the following sample Scala code.
     
@@ -428,7 +452,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will import the Brunel visualization capabilities by adding a jar file to your Notebook. 
     
-12. Insert a ninth cell.
+13. Insert a ninth cell.
 
     1. Enter the following sample Scala code.
 
@@ -442,7 +466,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture48.png "Image")
 
-13. Insert a tenth cell.
+14. Insert a tenth cell.
 
     1. Enter the following sample Scala code.
     
@@ -456,13 +480,13 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     ![alt text](images/Picture49.png "Image")
 
-14. Save the Notebook.
+15. Save the Notebook.
 
     1. Click ‘File’ -> ‘Save’
     
     ![alt text](images/Picture50.png "Image")
 
-15. Stop the Kernel.
+16. Stop the Kernel.
 
     1. From the sidebar menu, select Tent-Example-Project under ‘Recent items’
     
