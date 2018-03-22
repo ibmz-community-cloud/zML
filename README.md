@@ -291,16 +291,15 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     1. Enter the following sample Scala code.
 
     ```
-    import org.apache.spark.ml.feature.{StringIndexer, 
-       IndexToString, VectorIndexer, VectorAssembler}
-   import org.apache.spark.ml.classification.LogisticRegression
-   import com.ibm.analytics.ngp.ingest.Sampling
-   import com.ibm.analytics.wml.pipeline.{spark => wmlspark}
-   import com.ibm.analytics.wml.pipeline.flow._
-   import com.ibm.analytics.wml.pipeline.spark._
-   import com.ibm.analytics.wml.pipeline.spark.evaluation._
-   import spray.json._
-   import com.ibm.analytics.ngp.repository.{MetaNames, _}
+    import org.apache.spark.ml.feature.{StringIndexer, IndexToString, VectorIndexer, VectorAssembler}
+    import org.apache.spark.ml.classification.LogisticRegression
+    import com.ibm.analytics.ngp.ingest.Sampling
+    import com.ibm.analytics.wml.pipeline.{spark => wmlspark}
+    import com.ibm.analytics.wml.pipeline.flow._
+    import com.ibm.analytics.wml.pipeline.spark._
+    import com.ibm.analytics.wml.pipeline.spark.evaluation._
+    import spray.json._
+    import com.ibm.analytics.ngp.repository.{MetaNames, _}
     ```
     2. Select the cell and click ‘Cell’ -> ‘Run Cells’
     
