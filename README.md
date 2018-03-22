@@ -333,7 +333,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
       For example,
 
       ```
-      "url" -> "jdbc:db2://123.456.78.901:5035/DALLASB", "user" -> "SPKXXXX", 
+      "url" -> "123.456.78.901", "port" -> "5035", "location" -> "DALLASB", "user" -> "SPKXXXX", 
       "password" -> "password"
       ```
       
