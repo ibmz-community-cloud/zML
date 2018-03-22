@@ -290,7 +290,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
 
     This will return information about your Spark installation. For example,
     
-    ![alt text](images/Picture89.png "Image")
+    ![alt text](images/Picture42.png "Image")
 
 6. Insert a third cell.
 
