@@ -496,7 +496,7 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     3. Click ‘Stop Kernel’
     
-    ![alt text](images/Picture51.png "Image")
+    ![alt text](images/Picture91.png "Image")
     
 17. Verify that the 'tentModel' model shows up under the 'Models' tab on the 'Model Management' page.
 
