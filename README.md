@@ -429,30 +429,32 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
     This will save your model to the respository service.
     
-11. Save your Notebook
-
-    1. Click ‘File’ -> ‘Save’
-    
-    ![alt text](images/Picture90.png "Image")
-
-12. Verify that the 'tentModel' model shows up under the 'Models' tab on the 'Model Management' page.
-
-
-
-
-Insert an eighth cell.
+11. Insert an eighth cell.
 
     1. Enter the following sample Scala code.
     
     ```
-    %AddJar -magic file:///u/ibmuser/mlzos/ml/iml-library/brunel/spark-kernel-brunel-all-2.3.jar
+    %AddJar -magic file:///u/ibmuser/mlzos/iml-library/brunel/spark-kernel-brunel-all-2.3.jar
     ```
 
     2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
     
     This will import the Brunel visualization capabilities by adding a jar file to your Notebook. 
     
-13. Insert a ninth cell.
+12. Insert a ninth cell.
+
+    1. Enter the following sample Scala code.
+    
+    ```
+    val rocCurve = metrics.asInstanceOf[BinaryClassMLMetrics].roc.map{ case ROCPoint(x, y) => (x,y)}
+    val rocDF = spark.createDataFrame(rocCurve).withColumnRenamed("_1", "FPR").withColumnRenamed("_2", "TPR")
+    ```
+
+    2. Select the cell and Click ‘Cell’ -> ‘Run Cells’
+    
+    This will construct the data to plot the ROC curve.
+
+13. Insert a tenth cell.
 
     1. Enter the following sample Scala code.
 
@@ -466,7 +468,7 @@ Insert an eighth cell.
     
     ![alt text](images/Picture48.png "Image")
 
-14. Insert a tenth cell.
+14. Insert an eleventh cell.
 
     1. Enter the following sample Scala code.
     
@@ -484,7 +486,7 @@ Insert an eighth cell.
 
     1. Click ‘File’ -> ‘Save’
     
-    ![alt text](images/Picture50.png "Image")
+    ![alt text](images/Picture90.png "Image")
 
 16. Stop the Kernel.
 
@@ -495,6 +497,8 @@ Insert an eighth cell.
     3. Click ‘Stop Kernel’
     
     ![alt text](images/Picture51.png "Image")
+    
+17. Verify that the 'tentModel' model shows up under the 'Models' tab on the 'Model Management' page.
 
 ## Reference
 ### Links
