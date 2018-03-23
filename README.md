@@ -500,6 +500,8 @@ In this section, you will use the Jupyter Notebook tool that is provided with Ma
     
 17. Verify that the 'tentModel' model shows up under the 'Models' tab on the 'Model Management' page.
 
+    ![alt text](images/Picture92.png "Image")
+
 ## Reference
 ### Links
 [IBM Z Community Cloud self-service portal](https://zcloud.marist.edu/#/login)
